@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aventura Matemática: Resgate Espacial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo" id="topo" hidden>
+    <div class="painel" id="painel-missao">🚀 <span id="missao-nome">Missão 1</span></div>
+    <div class="painel" id="painel-vidas" aria-label="Vidas">❤️❤️❤️</div>
+    <div class="painel" id="painel-pontos">⭐ <span id="pontos">0</span></div>
+  </header>
+
+  <main class="palco">
+    <!-- TELA INICIAL -->
+    <section class="tela ativa" id="tela-inicio">
+      <div class="mascote grande" aria-hidden="true">🤖</div>
+      <h1>Aventura Matemática</h1>
+      <p class="sub">Ajude o robô Bolt a voltar para casa!</p>
+      <div class="missoes-icones" aria-hidden="true"><span>🍎</span><span>⏱️</span><span>🧩</span></div>
+      <button class="botao botao-grande" id="btn-jogar">▶ Jogar</button>
+    </section>
+
+    <!-- MISSÃO 1: QUIZ -->
+    <section class="tela" id="tela-quiz">
+      <h2 class="titulo-missao">🍎 Conte e calcule!</h2>
+      <div class="cartao">
+        <div class="visual" id="quiz-visual"></div>
+        <p class="pergunta" id="quiz-pergunta"></p>
+      </div>
+      <div class="opcoes" id="quiz-opcoes"></div>
+    </section>
+
+    <!-- MISSÃO 2: VERDADEIRO OU FALSO -->
+    <section class="tela" id="tela-vf">
+      <h2 class="titulo-missao">⏱️ Rápido: certo ou errado?</h2>
+      <div class="barra"><div class="barra-cheia" id="vf-barra"></div></div>
+      <div class="cartao">
+        <p class="pergunta grande-texto" id="vf-pergunta"></p>
+      </div>
+      <div class="opcoes duas">
+        <button class="botao verde" id="btn-verdade">👍 Verdade</button>
+        <button class="botao vermelho" id="btn-falso">👎 Falso</button>
+      </div>
+    </section>
+
+    <!-- MISSÃO 3: MEMÓRIA -->
+    <section class="tela" id="tela-memoria">
+      <h2 class="titulo-missao">🧩 Encontre os pares!</h2>
+      <div class="grade-memoria" id="grade-memoria"></div>
+    </section>
+
+    <!-- FIM -->
+    <section class="tela" id="tela-fim">
+      <div class="mascote grande" id="fim-mascote" aria-hidden="true">🏠</div>
+      <h2 id="fim-titulo"></h2>
+      <div class="estrelas-fim" id="fim-estrelas" aria-hidden="true"></div>
+      <p class="sub">Você fez <strong id="fim-pontos">0</strong> pontos!</p>
+      <button class="botao botao-grande" id="btn-reiniciar">🔄 Jogar de novo</button>
+    </section>
+
+    <div class="feedback" id="feedback" aria-live="polite"></div>
+  </main>
+
+  <footer class="rodape">
+    <p>Matemática • 6º ano • Feito com 💜 em HTML, CSS e JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
